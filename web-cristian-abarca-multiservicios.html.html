@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristian Abarca Multiservicios | Fontanero en Cuenca</title>
+  <meta name="description" content="Empresa de fontanería y multiservicios en Cuenca. Reformas de baños y cocinas, albañilería, electricidad e instalaciones. Presupuesto sin compromiso.">
+  <style>
+    :root{
+      --navy:#1e5f8a;
+      --blue:#3fa0d8;
+      --gold:#c9a14a;
+      --gold2:#b18b3c;
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --shadow:0 10px 25px rgba(30,95,138,0.10);
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(15,95,143,0.10), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(201,161,74,0.10), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height:1.55;
+    }
+
+    a{color:inherit;}
+
+    header{
+      color:#fff;
+      border-bottom: 4px solid var(--gold);
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+    }
+
+    .topline{
+      background: rgba(0,0,0,0.18);
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .topline-inner{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px 18px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      font-size: 0.95em;
+      opacity: 0.95;
+    }
+
+    .topline a{ text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.25); }
+    .topline a:hover{ border-bottom-color: rgba(255,255,255,0.7); }
+    .sep{opacity:0.7;}
+
+    .hero{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 44px 18px 52px;
+      text-align:center;
+    }
+
+    .hero-logo{
+      width: 170px;
+      height: auto;
+      margin: 0 auto 16px;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.25));
+    }
+
+    header h1{
+      margin:0;
+      font-size: 2.5em;
+      letter-spacing: 0.6px;
+    }
+
+    header p{
+      margin: 12px auto 0;
+      max-width: 820px;
+      font-size: 1.12em;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .hero-actions{
+      margin-top: 26px;
+      display:flex;
+      gap: 12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-block;
+      padding: 18px 46px;
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      color: var(--navy);
+      text-decoration:none;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 1.05em;
+      letter-spacing: 0.4px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn:hover{ background: linear-gradient(135deg, #e0bb6a, var(--gold)); transform: translateY(-2px); box-shadow: 0 16px 32px rgba(0,0,0,0.28);}
+
+    .btn.btn-outline{
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: none;
+    }
+
+    .btn.btn-outline:hover{ border-color:#fff; transform: translateY(-1px); }
+
+    section{
+      max-width: 1100px;
+      margin: 22px auto;
+      background: var(--card);
+      border-radius: 14px;
+      padding: 38px 22px;
+      box-shadow: var(--shadow);
+    }
+
+    h2{
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 1.55em;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+
+    h2:before{
+      content:"";
+      width: 6px;
+      height: 22px;
+      border-radius: 999px;
+      background: var(--gold);
+      display:inline-block;
+    }
+
+    .muted{ color: var(--muted); }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .service-card{
+      border: 1px solid rgba(11,60,93,0.10);
+      border-radius: 12px;
+      padding: 16px 16px;
+      background: linear-gradient(180deg, rgba(15,95,143,0.03), transparent 55%);
+    }
+
+    .service-card strong{ color: var(--navy); }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .gallery-grid img{
+      width:100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+      border: 1px solid rgba(201,161,74,0.25);
+      transition: transform .15s ease;
+    }
+
+    .gallery-grid img:hover{ transform: scale(1.01); }
+
+    .contact-box{
+      max-width: 1100px;
+      margin: 22px auto;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: white;
+      text-align:center;
+      padding: 36px 22px;
+      border-radius: 14px;
+      border-top: 4px solid var(--gold);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box a{ color: #fff; text-decoration:none; border-bottom: 1px solid rgba(255,255,255,0.25); }
+    .contact-box a:hover{ border-bottom-color: rgba(255,255,255,0.7); }
+
+    footer{
+      text-align:center;
+      padding: 26px 18px;
+      color: rgba(17,24,39,0.7);
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 600px){
+      header h1{ font-size: 2.0em; }
+      .hero-logo{ width: 150px; }
+      .btn{ width: 100%; max-width: 360px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="topline">
+    <div class="topline-inner">
+      <span>📍 Cuenca</span>
+      <span class="sep">•</span>
+      <a href="tel:+34620224163">620 22 41 63</a>
+      <span class="sep">/</span>
+      <a href="tel:+34622836906">622 83 69 06</a>
+      <span class="sep">•</span>
+      <a href="mailto:cristianabarcamultiservicios@gmail.com">cristianabarcamultiservicios@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <img class="hero-logo" src="logo.jpg" alt="Cristian Abarca Multiservicios">
+    <h1>Cristian Abarca Multiservicios</h1>
+    <p>Fontanería · Reformas de baños y cocinas · Albañilería · Electricidad</p>
+    <div class="hero-actions">
+      <a class="btn" href="https://wa.me/34620224163">Solicitar presupuesto por WhatsApp</a>
+      <a class="btn btn-outline" href="#contacto">Ver contacto</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>Sobre Nosotros</h2>
+  <p>
+    Somos una empresa de fontanería y multiservicios en Cuenca. Especialistas en reformas de baños y cocinas, instalaciones y reparaciones de fontanería, trabajos de albañilería, electricidad y mantenimiento del hogar. Trabajamos tanto en viviendas como en locales y comunidades.
+  </p>
+</section>
+
+<section>
+  <h2>Trabajos Realizados</h2>
+  <p class="muted">Algunos ejemplos de reformas realizadas.</p>
+  <div class="gallery-grid">
+    <img src="trabajo1.png" alt="Reforma de baño en Cuenca">
+  </div>
+</section>
+
+<section class="services">
+  <h2>Nuestros Servicios</h2>
+  <p class="muted">Trabajos de fontanería y reformas para viviendas, locales y comunidades.</p>
+
+  <div class="services-grid">
+    <div class="service-card"><strong>Fontanería</strong><br><span class="muted">Instalaciones, reparaciones y mantenimiento.</span></div>
+    <div class="service-card"><strong>Reformas de baños</strong><br><span class="muted">Reformas completas y parciales.</span></div>
+    <div class="service-card"><strong>Reformas de cocinas</strong><br><span class="muted">Actualización y mejora de espacios.</span></div>
+    <div class="service-card"><strong>Albañilería</strong><br><span class="muted">Trabajos de obra y acabados.</span></div>
+    <div class="service-card"><strong>Electricidad</strong><br><span class="muted">Instalaciones y pequeñas reformas.</span></div>
+    <div class="service-card"><strong>Instalación de sanitarios</strong><br><span class="muted">Grifería, WC, platos de ducha, mamparas.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Zona de Servicio</h2>
+  <p>Cuenca y alrededores.</p>
+</section>
+
+<section id="contacto" class="contact-box">
+  <h2>Contacto</h2>
+  <p>Teléfonos: 620 22 41 63 / 622 83 69 06</p>
+  <p>Email: cristianabarcamultiservicios@gmail.com</p>
+  <p>Presupuesto sin compromiso</p>
+</section>
+
+<footer>
+  © 2026 Cristian Abarca Multiservicios
+</footer>
+
+</body>
+</html>
